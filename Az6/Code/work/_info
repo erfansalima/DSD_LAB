@@ -1,0 +1,44 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Quartus
+vIncubator
+Z1 IURQ7l[7]b36:50A;9K<=W0
+Z2 V:_=adUaEJWjV`HPO]I<fH3
+Z3 dD:\uni\summer\dsd\New folder
+Z4 w1689715400
+Z5 8D:/uni/summer/dsd/New folder/Incubator.v
+Z6 FD:/uni/summer/dsd/New folder/Incubator.v
+L0 1
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@incubator
+!i10b 1
+Z10 !s100 fBWnB:4m2?b<Z=>=lK_0n1
+!s85 0
+Z11 !s108 1689715433.175000
+Z12 !s107 D:/uni/summer/dsd/New folder/Incubator.v|
+Z13 !s90 -reportprogress|300|-work|work|D:/uni/summer/dsd/New folder/Incubator.v|
+!s101 -O0
+vtestbench
+!i10b 1
+!s100 ;cEY1gTEafN0:JW?5CV[k2
+Igj35[4EkcM?[H31z2P3kc2
+VhGfW:390DM[oDMzegDH9`2
+R3
+w1689715420
+8D:/uni/summer/dsd/New folder/testbench.v
+FD:/uni/summer/dsd/New folder/testbench.v
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1689715433.212000
+!s107 D:/uni/summer/dsd/New folder/testbench.v|
+!s90 -reportprogress|300|-work|work|D:/uni/summer/dsd/New folder/testbench.v|
+!s101 -O0
+R8

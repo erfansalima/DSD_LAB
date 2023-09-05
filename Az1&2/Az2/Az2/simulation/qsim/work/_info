@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\uni\summer\dsd\Az2\simulation\qsim
+vfourBitCounter
+Z1 !s100 X=Y3HjG`kc997<0KS]H0o0
+Z2 IX<H05`lUU5Dahha2QaCh62
+Z3 V]ik?M71CC0EZGQhk=G2Ei0
+Z4 dD:\uni\summer\dsd\Az2\simulation\qsim
+Z5 w1688848042
+Z6 8Az2.vo
+Z7 FAz2.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Az2.vo|
+Z10 o-work work -O0
+Z11 nfour@bit@counter
+Z12 !s108 1688848043.253000
+Z13 !s107 Az2.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vfourBitCounter_vlg_check_tst
+Z14 !s100 aUTW9<_GZ;`Be4=]aM[iQ1
+Z15 I=LP1cENb?WS;hZceHFM4b3
+Z16 V0;[_CVo=FBcH[BRRgEieP0
+R4
+R5
+Z17 8Waveform.vwf.vt
+Z18 FWaveform.vwf.vt
+L0 63
+R8
+r1
+31
+Z19 !s108 1688848043.291000
+Z20 !s107 Waveform.vwf.vt|
+Z21 !s90 -work|work|Waveform.vwf.vt|
+R10
+Z22 nfour@bit@counter_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vfourBitCounter_vlg_sample_tst
+Z23 !s100 ?9ANSALANoc92GVFK1GBF2
+Z24 I9Z8FSoC_P12F_LadS^m?b3
+Z25 VnEW8R1A;6LcHT;AE4>hcd1
+R4
+R5
+R17
+R18
+L0 29
+R8
+r1
+31
+R19
+R20
+R21
+R10
+Z26 nfour@bit@counter_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vfourBitCounter_vlg_vec_tst
+Z27 !s100 0UOM135U2Pk;7iO>JGCbO0
+Z28 I1kJ_SX6mTFM>^Kg0l7N3m1
+Z29 VdJQUeR5[k1LFmQVm:Vd>h3
+R4
+R5
+R17
+R18
+Z30 L0 211
+R8
+r1
+31
+R19
+R20
+R21
+R10
+Z31 nfour@bit@counter_vlg_vec_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vWaitingRoom
+Z32 !s100 230HBfU8fEXHUZdb`faB;3
+Z33 I[K0Be?PJamVT?@W24VPV?2
+Z34 V:<Am_F<HGnz7:RSh33O[m3
+R4
+Z35 w1688857540
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z36 n@waiting@room
+!i10b 1
+!s85 0
+Z37 !s108 1688857540.719000
+R13
+!s101 -O0
+vWaitingRoom_vlg_check_tst
+!i10b 1
+Z38 !s100 9EK3=46E^j7YL987HW3m13
+Z39 I_9n7g`mgDQaHFPUKZ_l3H2
+Z40 VlPFKX?6moHP@9gGh:^V8F0
+R4
+Z41 w1688857539
+Z42 8Waveform2.vwf.vt
+Z43 FWaveform2.vwf.vt
+L0 67
+R8
+r1
+!s85 0
+31
+Z44 !s108 1688857540.753000
+Z45 !s107 Waveform2.vwf.vt|
+Z46 !s90 -work|work|Waveform2.vwf.vt|
+!s101 -O0
+R10
+Z47 n@waiting@room_vlg_check_tst
+vWaitingRoom_vlg_sample_tst
+!i10b 1
+Z48 !s100 lj4b4z8Pi@Y2d^4aPEb5O0
+Z49 I_NO>Ki6`_RgPi:74c`RJN0
+Z50 VO3[dF8a_d77bURGoKfZ3B0
+R4
+R41
+R42
+R43
+L0 29
+R8
+r1
+!s85 0
+31
+R44
+R45
+R46
+!s101 -O0
+R10
+Z51 n@waiting@room_vlg_sample_tst
+vWaitingRoom_vlg_vec_tst
+!i10b 1
+!s100 `1R6];Cc^kg`f@CHFER<E0
+IfFQhAQGFDg1WWN@TlM6fz2
+Z52 Vz@odK@Gn6j]7M[Ol<Pi:H2
+R4
+R41
+R42
+R43
+Z53 L0 269
+R8
+r1
+!s85 0
+31
+R44
+R45
+R46
+!s101 -O0
+R10
+Z54 n@waiting@room_vlg_vec_tst

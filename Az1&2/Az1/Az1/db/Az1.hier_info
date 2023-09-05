@@ -1,0 +1,821 @@
+|Az1
+R3 <= RemainderOf3:inst.RES
+D0[0] => RemainderOf3:inst.A[0]
+D0[0] => RemainderOf11:inst3.A[0]
+D0[1] => RemainderOf3:inst.A[1]
+D0[1] => RemainderOf11:inst3.A[1]
+D0[2] => RemainderOf3:inst.A[2]
+D0[2] => RemainderOf11:inst3.A[2]
+D0[3] => RemainderOf3:inst.A[3]
+D0[3] => RemainderOf11:inst3.A[3]
+D1[0] => RemainderOf3:inst.B[0]
+D1[0] => RemainderOf11:inst3.B[0]
+D1[1] => RemainderOf3:inst.B[1]
+D1[1] => RemainderOf11:inst3.B[1]
+D1[2] => RemainderOf3:inst.B[2]
+D1[2] => RemainderOf11:inst3.B[2]
+D1[3] => RemainderOf3:inst.B[3]
+D1[3] => RemainderOf11:inst3.B[3]
+D2[0] => RemainderOf3:inst.C[0]
+D2[0] => RemainderOf11:inst3.C[0]
+D2[1] => RemainderOf3:inst.C[1]
+D2[1] => RemainderOf11:inst3.C[1]
+D2[2] => RemainderOf3:inst.C[2]
+D2[2] => RemainderOf11:inst3.C[2]
+D2[3] => RemainderOf3:inst.C[3]
+D2[3] => RemainderOf11:inst3.C[3]
+D3[0] => RemainderOf3:inst.D[0]
+D3[0] => RemainderOf11:inst3.D[0]
+D3[1] => RemainderOf3:inst.D[1]
+D3[1] => RemainderOf11:inst3.D[1]
+D3[2] => RemainderOf3:inst.D[2]
+D3[2] => RemainderOf11:inst3.D[2]
+D3[3] => RemainderOf3:inst.D[3]
+D3[3] => RemainderOf11:inst3.D[3]
+R11 <= RemainderOf11:inst3.RES
+
+
+|Az1|RemainderOf3:inst
+RES <= MUX:inst18.out
+A[0] => RemainderForOneDigit:inst.A[0]
+A[1] => RemainderForOneDigit:inst.A[1]
+A[2] => RemainderForOneDigit:inst.A[2]
+A[3] => RemainderForOneDigit:inst.A[3]
+B[0] => RemainderForOneDigit:inst1.A[0]
+B[1] => RemainderForOneDigit:inst1.A[1]
+B[2] => RemainderForOneDigit:inst1.A[2]
+B[3] => RemainderForOneDigit:inst1.A[3]
+C[0] => RemainderForOneDigit:inst2.A[0]
+C[1] => RemainderForOneDigit:inst2.A[1]
+C[2] => RemainderForOneDigit:inst2.A[2]
+C[3] => RemainderForOneDigit:inst2.A[3]
+D[0] => RemainderForOneDigit:inst3.A[0]
+D[1] => RemainderForOneDigit:inst3.A[1]
+D[2] => RemainderForOneDigit:inst3.A[2]
+D[3] => RemainderForOneDigit:inst3.A[3]
+
+
+|Az1|RemainderOf3:inst|MUX:inst18
+out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+q1 => inst1.IN0
+s => inst1.IN1
+s => inst3.IN0
+q0 => inst.IN0
+
+
+|Az1|RemainderOf3:inst|RemainderForOneDigit:inst9
+R[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+R[1] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+R[2] <= <GND>
+R[3] <= <GND>
+A[0] => inst1.IN2
+A[0] => inst2.IN3
+A[0] => inst5.IN0
+A[0] => inst11.IN2
+A[0] => inst19.IN0
+A[0] => inst16.IN0
+A[1] => inst1.IN1
+A[1] => inst8.IN0
+A[1] => inst4.IN0
+A[1] => inst17.IN0
+A[1] => inst12.IN1
+A[1] => inst15.IN0
+A[2] => inst1.IN0
+A[2] => inst7.IN0
+A[2] => inst.IN0
+A[2] => inst11.IN0
+A[2] => inst18.IN0
+A[3] => inst6.IN0
+A[3] => inst10.IN0
+
+
+|Az1|RemainderOf3:inst|fourBitAdder:inst7
+cout <= FA:inst3.c
+a[0] => FA:inst.a
+a[1] => FA:inst1.a
+a[2] => FA:inst2.a
+a[3] => FA:inst3.a
+b[0] => FA:inst.b
+b[1] => FA:inst1.b
+b[2] => FA:inst2.b
+b[3] => FA:inst3.b
+s[0] <= FA:inst.s
+s[1] <= FA:inst1.s
+s[2] <= FA:inst2.s
+s[3] <= FA:inst3.s
+
+
+|Az1|RemainderOf3:inst|fourBitAdder:inst7|FA:inst3
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf3:inst|fourBitAdder:inst7|FA:inst2
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf3:inst|fourBitAdder:inst7|FA:inst1
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf3:inst|fourBitAdder:inst7|FA:inst
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf3:inst|fourBitAdder:inst4
+cout <= FA:inst3.c
+a[0] => FA:inst.a
+a[1] => FA:inst1.a
+a[2] => FA:inst2.a
+a[3] => FA:inst3.a
+b[0] => FA:inst.b
+b[1] => FA:inst1.b
+b[2] => FA:inst2.b
+b[3] => FA:inst3.b
+s[0] <= FA:inst.s
+s[1] <= FA:inst1.s
+s[2] <= FA:inst2.s
+s[3] <= FA:inst3.s
+
+
+|Az1|RemainderOf3:inst|fourBitAdder:inst4|FA:inst3
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf3:inst|fourBitAdder:inst4|FA:inst2
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf3:inst|fourBitAdder:inst4|FA:inst1
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf3:inst|fourBitAdder:inst4|FA:inst
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf3:inst|RemainderForOneDigit:inst
+R[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+R[1] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+R[2] <= <GND>
+R[3] <= <GND>
+A[0] => inst1.IN2
+A[0] => inst2.IN3
+A[0] => inst5.IN0
+A[0] => inst11.IN2
+A[0] => inst19.IN0
+A[0] => inst16.IN0
+A[1] => inst1.IN1
+A[1] => inst8.IN0
+A[1] => inst4.IN0
+A[1] => inst17.IN0
+A[1] => inst12.IN1
+A[1] => inst15.IN0
+A[2] => inst1.IN0
+A[2] => inst7.IN0
+A[2] => inst.IN0
+A[2] => inst11.IN0
+A[2] => inst18.IN0
+A[3] => inst6.IN0
+A[3] => inst10.IN0
+
+
+|Az1|RemainderOf3:inst|RemainderForOneDigit:inst1
+R[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+R[1] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+R[2] <= <GND>
+R[3] <= <GND>
+A[0] => inst1.IN2
+A[0] => inst2.IN3
+A[0] => inst5.IN0
+A[0] => inst11.IN2
+A[0] => inst19.IN0
+A[0] => inst16.IN0
+A[1] => inst1.IN1
+A[1] => inst8.IN0
+A[1] => inst4.IN0
+A[1] => inst17.IN0
+A[1] => inst12.IN1
+A[1] => inst15.IN0
+A[2] => inst1.IN0
+A[2] => inst7.IN0
+A[2] => inst.IN0
+A[2] => inst11.IN0
+A[2] => inst18.IN0
+A[3] => inst6.IN0
+A[3] => inst10.IN0
+
+
+|Az1|RemainderOf3:inst|fourBitAdder:inst5
+cout <= FA:inst3.c
+a[0] => FA:inst.a
+a[1] => FA:inst1.a
+a[2] => FA:inst2.a
+a[3] => FA:inst3.a
+b[0] => FA:inst.b
+b[1] => FA:inst1.b
+b[2] => FA:inst2.b
+b[3] => FA:inst3.b
+s[0] <= FA:inst.s
+s[1] <= FA:inst1.s
+s[2] <= FA:inst2.s
+s[3] <= FA:inst3.s
+
+
+|Az1|RemainderOf3:inst|fourBitAdder:inst5|FA:inst3
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf3:inst|fourBitAdder:inst5|FA:inst2
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf3:inst|fourBitAdder:inst5|FA:inst1
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf3:inst|fourBitAdder:inst5|FA:inst
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf3:inst|RemainderForOneDigit:inst2
+R[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+R[1] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+R[2] <= <GND>
+R[3] <= <GND>
+A[0] => inst1.IN2
+A[0] => inst2.IN3
+A[0] => inst5.IN0
+A[0] => inst11.IN2
+A[0] => inst19.IN0
+A[0] => inst16.IN0
+A[1] => inst1.IN1
+A[1] => inst8.IN0
+A[1] => inst4.IN0
+A[1] => inst17.IN0
+A[1] => inst12.IN1
+A[1] => inst15.IN0
+A[2] => inst1.IN0
+A[2] => inst7.IN0
+A[2] => inst.IN0
+A[2] => inst11.IN0
+A[2] => inst18.IN0
+A[3] => inst6.IN0
+A[3] => inst10.IN0
+
+
+|Az1|RemainderOf3:inst|RemainderForOneDigit:inst3
+R[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+R[1] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+R[2] <= <GND>
+R[3] <= <GND>
+A[0] => inst1.IN2
+A[0] => inst2.IN3
+A[0] => inst5.IN0
+A[0] => inst11.IN2
+A[0] => inst19.IN0
+A[0] => inst16.IN0
+A[1] => inst1.IN1
+A[1] => inst8.IN0
+A[1] => inst4.IN0
+A[1] => inst17.IN0
+A[1] => inst12.IN1
+A[1] => inst15.IN0
+A[2] => inst1.IN0
+A[2] => inst7.IN0
+A[2] => inst.IN0
+A[2] => inst11.IN0
+A[2] => inst18.IN0
+A[3] => inst6.IN0
+A[3] => inst10.IN0
+
+
+|Az1|RemainderOf11:inst3
+RES <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => fourBitAdder:inst.a[0]
+A[1] => fourBitAdder:inst.a[1]
+A[2] => fourBitAdder:inst.a[2]
+A[3] => fourBitAdder:inst.a[3]
+C[0] => fourBitAdder:inst.b[0]
+C[1] => fourBitAdder:inst.b[1]
+C[2] => fourBitAdder:inst.b[2]
+C[3] => fourBitAdder:inst.b[3]
+B[0] => fourBitAdder:inst2.a[0]
+B[1] => fourBitAdder:inst2.a[1]
+B[2] => fourBitAdder:inst2.a[2]
+B[3] => fourBitAdder:inst2.a[3]
+D[0] => fourBitAdder:inst2.b[0]
+D[1] => fourBitAdder:inst2.b[1]
+D[2] => fourBitAdder:inst2.b[2]
+D[3] => fourBitAdder:inst2.b[3]
+
+
+|Az1|RemainderOf11:inst3|fourBitMUX:inst26
+out[0] <= MUX:inst3.out
+out[1] <= MUX:inst2.out
+out[2] <= MUX:inst1.out
+out[3] <= MUX:inst.out
+x[0] => MUX:inst3.q0
+x[1] => MUX:inst2.q0
+x[2] => MUX:inst1.q0
+x[3] => MUX:inst.q0
+y[0] => MUX:inst3.q1
+y[1] => MUX:inst2.q1
+y[2] => MUX:inst1.q1
+y[3] => MUX:inst.q1
+s => MUX:inst.s
+s => MUX:inst1.s
+s => MUX:inst2.s
+s => MUX:inst3.s
+
+
+|Az1|RemainderOf11:inst3|fourBitMUX:inst26|MUX:inst
+out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+q1 => inst1.IN0
+s => inst1.IN1
+s => inst3.IN0
+q0 => inst.IN0
+
+
+|Az1|RemainderOf11:inst3|fourBitMUX:inst26|MUX:inst1
+out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+q1 => inst1.IN0
+s => inst1.IN1
+s => inst3.IN0
+q0 => inst.IN0
+
+
+|Az1|RemainderOf11:inst3|fourBitMUX:inst26|MUX:inst2
+out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+q1 => inst1.IN0
+s => inst1.IN1
+s => inst3.IN0
+q0 => inst.IN0
+
+
+|Az1|RemainderOf11:inst3|fourBitMUX:inst26|MUX:inst3
+out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+q1 => inst1.IN0
+s => inst1.IN1
+s => inst3.IN0
+q0 => inst.IN0
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst
+cout <= FA:inst3.c
+a[0] => FA:inst.a
+a[1] => FA:inst1.a
+a[2] => FA:inst2.a
+a[3] => FA:inst3.a
+b[0] => FA:inst.b
+b[1] => FA:inst1.b
+b[2] => FA:inst2.b
+b[3] => FA:inst3.b
+s[0] <= FA:inst.s
+s[1] <= FA:inst1.s
+s[2] <= FA:inst2.s
+s[3] <= FA:inst3.s
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst|FA:inst3
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst|FA:inst2
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst|FA:inst1
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst|FA:inst
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst1
+cout <= FA:inst3.c
+a[0] => FA:inst.a
+a[1] => FA:inst1.a
+a[2] => FA:inst2.a
+a[3] => FA:inst3.a
+b[0] => FA:inst.b
+b[1] => FA:inst1.b
+b[2] => FA:inst2.b
+b[3] => FA:inst3.b
+s[0] <= FA:inst.s
+s[1] <= FA:inst1.s
+s[2] <= FA:inst2.s
+s[3] <= FA:inst3.s
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst1|FA:inst3
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst1|FA:inst2
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst1|FA:inst1
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst1|FA:inst
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf11:inst3|fourBitMUX:inst27
+out[0] <= MUX:inst3.out
+out[1] <= MUX:inst2.out
+out[2] <= MUX:inst1.out
+out[3] <= MUX:inst.out
+x[0] => MUX:inst3.q0
+x[1] => MUX:inst2.q0
+x[2] => MUX:inst1.q0
+x[3] => MUX:inst.q0
+y[0] => MUX:inst3.q1
+y[1] => MUX:inst2.q1
+y[2] => MUX:inst1.q1
+y[3] => MUX:inst.q1
+s => MUX:inst.s
+s => MUX:inst1.s
+s => MUX:inst2.s
+s => MUX:inst3.s
+
+
+|Az1|RemainderOf11:inst3|fourBitMUX:inst27|MUX:inst
+out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+q1 => inst1.IN0
+s => inst1.IN1
+s => inst3.IN0
+q0 => inst.IN0
+
+
+|Az1|RemainderOf11:inst3|fourBitMUX:inst27|MUX:inst1
+out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+q1 => inst1.IN0
+s => inst1.IN1
+s => inst3.IN0
+q0 => inst.IN0
+
+
+|Az1|RemainderOf11:inst3|fourBitMUX:inst27|MUX:inst2
+out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+q1 => inst1.IN0
+s => inst1.IN1
+s => inst3.IN0
+q0 => inst.IN0
+
+
+|Az1|RemainderOf11:inst3|fourBitMUX:inst27|MUX:inst3
+out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+q1 => inst1.IN0
+s => inst1.IN1
+s => inst3.IN0
+q0 => inst.IN0
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst2
+cout <= FA:inst3.c
+a[0] => FA:inst.a
+a[1] => FA:inst1.a
+a[2] => FA:inst2.a
+a[3] => FA:inst3.a
+b[0] => FA:inst.b
+b[1] => FA:inst1.b
+b[2] => FA:inst2.b
+b[3] => FA:inst3.b
+s[0] <= FA:inst.s
+s[1] <= FA:inst1.s
+s[2] <= FA:inst2.s
+s[3] <= FA:inst3.s
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst2|FA:inst3
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst2|FA:inst2
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst2|FA:inst1
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst2|FA:inst
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst5
+cout <= FA:inst3.c
+a[0] => FA:inst.a
+a[1] => FA:inst1.a
+a[2] => FA:inst2.a
+a[3] => FA:inst3.a
+b[0] => FA:inst.b
+b[1] => FA:inst1.b
+b[2] => FA:inst2.b
+b[3] => FA:inst3.b
+s[0] <= FA:inst.s
+s[1] <= FA:inst1.s
+s[2] <= FA:inst2.s
+s[3] <= FA:inst3.s
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst5|FA:inst3
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst5|FA:inst2
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst5|FA:inst1
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Az1|RemainderOf11:inst3|fourBitAdder:inst5|FA:inst
+s <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+a => inst5.IN0
+a => inst2.IN0
+a => inst.IN0
+b => inst5.IN1
+b => inst3.IN0
+b => inst.IN1
+cin => inst6.IN1
+cin => inst2.IN1
+cin => inst3.IN1
+c <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
